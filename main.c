@@ -2,9 +2,8 @@
 
 int main(){
 
-     Subsequence *subOne = NULL;//Голова очереди
+    Subsequence *subOne = NULL;//Голова очереди
 
-    //printf("\E[H\E[2J");
     FILE *sqc1,*sqc2;
     char *text1,*text2;
     int text_size1 = 0;
