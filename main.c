@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "LCS.h"
+#include "lib.h"
 
-main()
-{
+int main(){
+
+     Subsequence *subOne = NULL;//Голова очереди
+
+    //printf("\E[H\E[2J");
     FILE *sqc1,*sqc2;
     char *text1,*text2;
     int text_size1 = 0;
@@ -28,7 +29,6 @@ main()
 
     fseek(sqc1,0,SEEK_SET);
     fseek(sqc2,0,SEEK_SET);
-    
     while(fscanf(sqc1,"%s",text1)!=EOF)
     {
         printf("\n%s",text1);
@@ -37,8 +37,10 @@ main()
     {
         printf("\n%s",text2);
     }
+
     LCS(text1,text2,text_size1-2,text_size2-1,L);
     printf("\n");
+    
     for(int i = 0;i<text_size1;i++)
     {
         for(int j = 0;j<text_size2;j++)
